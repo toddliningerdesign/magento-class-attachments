@@ -1,0 +1,21 @@
+{
+    "name": "toddlininger/classattachments",
+    "description": "ToddLininger Class Attachments",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.4.0",
+        "toddlininger/classmanager": ">=1.7.0"
+    },
+    "license": [
+        "Commercial License - Copyright 2022, Todd Lininger Design, LLC. All rights reserved. * https://toddlininger.com * See LICENSE.txt for details."
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "ToddLininger\\ClassAttachments\\": ""
+        }
+    }
+}
