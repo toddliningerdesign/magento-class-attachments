@@ -8,19 +8,22 @@ namespace ToddLininger\ClassAttachments\Helper;
 class Config
 {
     const CONFIG_PREFIX = 'tl_class_attachments';
-    const CONFIG_PATH_GENERAL_INCLUDE_ENABLED = 'general/include_attachments_enabled';
 
     /** @var \Magento\Framework\App\Config\ScopeConfigInterface  */
     protected $scopeConfig;
+    /** @var \ToddLininger\ClassManager\Helper\Config  */
+    protected $cmConfig;
 
     /**
-     * Config constructor.
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+     * @param \ToddLininger\ClassManager\Helper\Config $cmConfig
      */
     public function __construct(
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
+        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
+        \ToddLininger\ClassManager\Helper\Config $cmConfig
     ) {
         $this->scopeConfig = $scopeConfig;
+        $this->cmConfig = $cmConfig;
     }
 
     /**
@@ -40,15 +43,12 @@ class Config
     }
 
     /**
+     * Use parent setting
      * @param string $scope
      * @return bool
      */
     public function isIncludeAttachmentEnabled($scope = \Magento\Store\Model\ScopeInterface::SCOPE_WEBSITE)
     {
-        $paramPath = [
-            static::CONFIG_PREFIX,
-            static::CONFIG_PATH_GENERAL_INCLUDE_ENABLED
-        ];
-        return $this->scopeConfig->isSetFlag(implode('/', $paramPath), $scope);
+        return $this->cmConfig->isIncludeDownloadableLinksEnabled($scope);
     }
 }

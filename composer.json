@@ -2,7 +2,7 @@
     "name": "toddlininger/classattachments",
     "description": "ToddLininger Class Attachments",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": ">=7.4.0",
         "toddlininger/classmanager": ">=1.7.0"

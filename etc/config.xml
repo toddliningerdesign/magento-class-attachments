@@ -4,11 +4,6 @@
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <tl_class_attachments>
-            <general>
-                <include_attachments_enabled>1</include_attachments_enabled>
-            </general>
-        </tl_class_attachments>
         <csp>
             <mode>
                 <storefront>

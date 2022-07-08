@@ -3,7 +3,7 @@
   ~ Copyright 2022, Todd Lininger Design, LLC. All rights reserved. * https://toddlininger.com * See LICENSE.txt for details.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="ToddLininger_ClassAttachments" setup_version="1.0.0">
+    <module name="ToddLininger_ClassAttachments" setup_version="1.0.1">
         <sequence>
             <module name="ToddLininger_ClassManager"/>
             <module name="MageWorx_Downloads"/>
